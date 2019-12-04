@@ -6,7 +6,6 @@ declare(strict_types=1);
  * Plugin Name: Feedback
  * Description: Test plugin
  * Version: 1.0
- * Author: Itransition
  **/
 
 define( 'FEEDBACK__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );

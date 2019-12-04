@@ -9,6 +9,7 @@ require_once "../../../wp-load.php";
      $message = htmlspecialchars($_POST['message']);
 
      global $wpdb;
+     
      try {
          $table_name = $wpdb->prefix . 'feedbacks';
          $wpdb->insert($table_name, array(
