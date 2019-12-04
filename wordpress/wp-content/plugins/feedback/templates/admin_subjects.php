@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['add_new']) && $_POST['action'] == 'add_new_subject') {
-    $subject = $_POST['subject'];
+    $subject = htmlspecialchars($_POST['subject']);
     try {
         global $wpdb;
         $table_name = $wpdb->prefix . 'subjects';
@@ -24,19 +24,21 @@ if (isset($_POST['add_new']) && $_POST['action'] == 'add_new_subject') {
 else { ?>
 <div class="wrap">
     <h1>Manage subjects</h1>
+    <h3>Add Subject</h3>
     <form method="post" action="" name="add_author" enctype="multipart/form-data">
         <table class="form-table">
             <tr valign="top">
-                <th scope="row">Add feedback subject</th>
+                <th scope="row">Feedback subject name</th>
                 <td><input type="text" name="subject" value=""/></td>
                 <input type="hidden" name="action" value="add_new_subject"/>
             </tr>
         </table>
-        <input type="submit" name="add_new" value="Add subject">
+        <input type="submit" name="add_new" class="button button-primary" value="Add subject">
         <?php
             $sql = "SELECT * FROM wp_subjects";
             $results = $wpdb->get_results($sql);
             if (count($results)) : ?>
+                <h3>List of subjects</h3>
             <table>
                 <thead>
                 <tr>
@@ -49,7 +51,7 @@ else { ?>
                 foreach ($results as $result) :?>
                     <tr>
                         <td><? echo $result->subject; ?></td>
-                        <td><? echo '<input type="hidden" name="subject_id" value="' . $result->id . '"><input type="submit" name="delete_subject" value="delete"/>' ?></td>
+                        <td><? echo '<input type="hidden" name="subject_id" value="' . $result->id . '"><input type="submit" name="delete_subject" class="button action" value="delete"/>' ?></td>
                     </tr>
                 <? endforeach;
                 ?>

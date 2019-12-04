@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once "../../../wp-load.php";
 
  if (!empty($_POST)) {

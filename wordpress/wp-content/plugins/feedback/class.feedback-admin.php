@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 class Feedback_Admin
 {
@@ -57,7 +58,8 @@ class Feedback_Admin
         load_template(plugin_dir_path( __FILE__ ).'/templates/admin_subjects.php');
     }
 
-    function feedbacks_install() {
+    function feedbacks_install()
+    {
         global $wpdb;
         $table_name_feedbacks = $wpdb->prefix . 'feedbacks';
         $table_name_subjects = $wpdb->prefix . 'subjects';
