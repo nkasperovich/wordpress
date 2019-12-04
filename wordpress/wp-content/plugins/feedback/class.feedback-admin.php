@@ -15,7 +15,7 @@ class Feedback_Admin
     private static function init_hooks()
     {
         self::$initiated = true;
-        add_action('admin_menu',  array( 'Feedback_Admin',  'register_feedback_admin_menus' ), 1);
+        add_action('admin_menu', array( 'Feedback_Admin',  'register_feedback_admin_menus' ), 1);
         add_shortcode( 'feedback-form', array(  'Feedback_Admin', 'feedback_form' ) );
     }
 
