@@ -1,0 +1,28 @@
+{
+  "name": "nkasperovich/simple-feedback",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-only",
+  "description": "Test feedback plugin",
+  "homepage": "https://github.com/nkasperovich/wordpress",
+  "authors": [
+    {
+      "name": "Nikolay Kasperovich",
+      "email": "n.kasperovich@itransition.com",
+      "homepage": "https://github.com/nkasperovich"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "feedback"
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/nkasperovich/wordpress"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "composer/installers": "v1.0.6"
+  }
+}
