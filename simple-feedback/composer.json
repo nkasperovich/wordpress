@@ -19,10 +19,15 @@
     {
       "type": "vcs",
       "url": "https://github.com/nkasperovich/wordpress"
+    },
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
     }
   ],
   "require": {
     "php": ">=5.3.3",
-    "composer/installers": "v1.0.6"
+    "composer/installers": "~1.0",
+    "wpackagist-plugin/wp-mail-smtp":"1.7.1"
   }
 }
