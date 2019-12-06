@@ -3,8 +3,8 @@
 </div>
 <?php
 $sql = "SELECT name, email, subject, text FROM wp_feedbacks";
-$results = $wpdb->get_results($sql);
-if (count($results)) : ?>
+$results = $wpdb->get_results($sql);?>
+<?php if (count($results)) : ?>
     <table>
         <thead>
         <tr>
