@@ -21,10 +21,10 @@ services:
         container_name: mysql
         environment:
 
-            - MYSQL_ROOT_PASSWORD=mypassword
-            - MYSQL_DATABASE=wp_test
-            - MYSQL_USER=testtest
-            - MYSQL_PASSWORD=testtest
+            - MYSQL_ROOT_PASSWORD=
+            - MYSQL_DATABASE=
+            - MYSQL_USER=
+            - MYSQL_PASSWORD=
 
         volumes:
             - ./mysql/db:/var/lib/mysql   
